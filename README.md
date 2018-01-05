@@ -22,6 +22,9 @@ state.subscribe("counter", function () {
 
 });
 
+// for change the property you must
+state.set("counter", 123);
+
 // watch the history of change of state
 // return array history of change
 state.getHistory();
