@@ -1,6 +1,6 @@
 # ObservableState
 
-Javascript plugin for observe the object
+Javascript plugin for observe the state
 
 ## How to use (example)
 
