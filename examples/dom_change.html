@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM change</title>
+</head>
+<body>
+  <div class="counter">Счетчик: <span id="counter"></span></div>
+  <div id="history"></div>
+  <script src="../ObservableState.js"></script>
+  <script>
+state = new ObservableState({
+  counter: 0
+});
+
+state.subscribe("counter", function() {
+  document.getElementById("counter").innerText = this.get("counter");
+  document.getElementById("history").innerHTML = this.getHistory().join("<br>");
+});
+
+state.set("counter", 1);
+</script>
+</body>
+</html>
