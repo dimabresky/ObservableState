@@ -1,0 +1,23 @@
+{
+  "name": "observable-state",
+  "version": "1.0.0",
+  "description": "Javascript plugin for observe the state",
+  "main": "ObservableState.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimabresky/ObservableState.git"
+  },
+  "keywords": ["state", "managment", "js", "reactive", "state"],
+  "author": "dimabresky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dimabresky/ObservableState/issues"
+  },
+  "homepage": "https://github.com/dimabresky/ObservableState#readme"
+}
