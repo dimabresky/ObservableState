@@ -74,14 +74,15 @@
       if (__kex.apply(__state, [k])) {
         __state[k] = v;
 
-        if (typeof __subscribes[k] === "function") {
-          __subscribes[k].apply(self, []);
-        }
-
         __add2history.apply(__stateHistory, [
           `set value "${v}" in key "${k}"`,
           self.DEBUG_MODE
         ]);
+
+        if (typeof __subscribes[k] === "function") {
+          __subscribes[k].apply(self, []);
+        }
+
         return true;
       }
 
