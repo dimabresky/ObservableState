@@ -1,5 +1,5 @@
 /**
- * @version: 1.0
+ * @version: 1.1
  * @author: dimabresky https://github.com/dimabresky
  * @copyright: Copyright (c) 2017 dimabresky. Все права защищены.
  * @license: MIT лицензия http://www.opensource.org/licenses/mit-license.php
