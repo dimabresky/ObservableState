@@ -190,7 +190,10 @@
             return __state;
         };
     }
-
+    
+    /**
+     * Parameter for debug information showing in console of browser
+     */
     ObservableState.prototype.DEBUG_MODE = false;
 
     return ObservableState;
