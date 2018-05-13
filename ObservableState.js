@@ -183,7 +183,7 @@
         };
         
         /**
-         * Return source state
+         * Return object of state
          * @returns {}
          */
         self.getSource = function () {
