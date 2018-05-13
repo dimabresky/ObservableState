@@ -6,20 +6,32 @@
   <title>DOM change</title>
 </head>
 <body>
-  <div class="counter">Счетчик: <span id="counter"></span></div>
   <div id="history"></div>
+  <div>Show more details by state in console of browser</div>
   <script src="../ObservableState.js"></script>
   <script>
 state = new ObservableState({
-  counter: 0
+  counter: 0,
+  deep_obj: {
+      key: 0
+  }
 });
+
+console.log(`counter=${state.getSource().counter}`);
+console.log(`deep_obj.key=${state.getSource().deep_obj.key}`);
 
 state.subscribe("counter", function() {
-  document.getElementById("counter").innerText = this.get("counter");
-  document.getElementById("history").innerHTML = this.getHistory().join("<br>");
+    console.log(`counter key is changed (counter=${state.getSource().counter})`);
 });
 
+state.subscribe("deep_obj.key", function() {
+  console.log(`deep_obj.key key is changed (deep_obj.key=${state.getSource().deep_obj.key})`);
+});
+
+document.getElementById("history").innerHTML = state.getHistory().join("<br>");
+
 state.set("counter", 1);
+state.set("deep_obj.key", 1);
 </script>
 </body>
 </html>
